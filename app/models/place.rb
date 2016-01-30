@@ -7,4 +7,9 @@ class Place < ActiveRecord::Base
 
   belongs_to :user
 
+  geocoded_by :address
+  after_validation :geocode
+
+  #APi Maps:    AIzaSyBSk_U4E2x7C_1euaZVKsW8JPxfbJeyR1s 
+
 end
